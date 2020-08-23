@@ -1,3 +1,44 @@
 body {
-  background-color: plum;
+  overflow-y: scroll;
+  margin: 0;
+}
+
+main {
+  margin: 0 1rem 0 1rem;
+}
+
+#bumper {
+  height: 3rem;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.856);
+}
+
+#progress-bar {
+  background-color: #e9ecef;
+  height: 1rem;
+  margin: 1rem;
+  border-radius: 0.2rem;
+}
+
+#progress-bar-state {
+  background-color: #007bff;
+  height: 1rem;
+  border-radius: inherit;
+  width: 90%;
+}
+
+.box {
+  background-color: lavender;
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 1rem;
+  border-radius: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
 }
