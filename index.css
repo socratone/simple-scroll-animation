@@ -1,10 +1,12 @@
 body {
-  overflow-y: scroll;
   margin: 0;
+  height: 100vh;
 }
 
 main {
   margin: 0 1rem 0 1rem;
+  height: 100vh;
+  overflow: auto;
 }
 
 #bumper {
@@ -24,11 +26,13 @@ header {
   border-radius: 0.2rem;
 }
 
-#progress-bar-state {
+#progress-bar-percent {
   background-color: #007bff;
   height: 1rem;
   border-radius: inherit;
-  width: 90%;
+  width: 0;
+  transition-property: width;
+  transition-duration: 0.1s;
 }
 
 .box {
