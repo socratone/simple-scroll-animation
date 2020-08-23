@@ -1,9 +1,12 @@
 const main = document.getElementsByTagName('main')[0];
-const progressBarPercent = document.getElementById('progress-bar-percent');
+const animator = document.getElementById('animator');
+
+const ANIMATION_MARIGIN = 16 * 10;
 
 main.addEventListener('scroll', () => {
-  const { scrollHeight, offsetHeight, scrollTop } = main;
-  const scrollRange = scrollHeight - offsetHeight;
-  const scrollPercent = Math.round((scrollTop / scrollRange) * 100);
-  progressBarPercent.style.width = `${scrollPercent}%`;
+  if (animator.offsetTop < main.scrollTop + ANIMATION_MARIGIN) {
+    animator.classList.add('move');
+  } else {
+    animator.classList.remove('move');
+  }
 });
