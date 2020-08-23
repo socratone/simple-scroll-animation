@@ -3,10 +3,10 @@ const animator = document.getElementById('animator');
 
 const ANIMATION_MARIGIN = 16 * 10;
 
-main.addEventListener('scroll', () => {
+const scrollResponsiveAnimation = () => {
   if (animator.offsetTop < main.scrollTop + ANIMATION_MARIGIN) {
     animator.classList.add('move');
-  } else {
-    animator.classList.remove('move');
+    main.removeEventListener('scroll', scrollResponsiveAnimation);
   }
-});
+};
+main.addEventListener('scroll', scrollResponsiveAnimation);
